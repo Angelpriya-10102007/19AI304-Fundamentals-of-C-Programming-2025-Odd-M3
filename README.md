@@ -28,35 +28,35 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 ### Step 8: 
    Stop
 # Program:
-#include <stdio.h>
+    #include <stdio.h>
 
-int main()
-{
-int decimal, binary[32];
+    int main()
+    {
+    int decimal, binary[32];
 
-int i = 0;
+    int i = 0;
 
-scanf("%d", &decimal);
+    scanf("%d", &decimal);
 
-if (decimal == 0){
+    if (decimal == 0){
     printf("Binary equivalent: 0\n");
     return 0;
-}
+    }
 
-while (decimal > 0){
+    while (decimal > 0){
     binary[i] = decimal % 2;
     decimal = decimal / 2;
     i++;
-}
+    }
 
-printf("Binary equivalent: ");
-for (int j = i - 1; j >= 0; j--){
+    printf("Binary equivalent: ");
+    for (int j = i - 1; j >= 0; j--){
     printf("%d", binary[j]);
-}
+    }
 
-printf("\n");
-return 0;
-}
+    printf("\n");
+    return 0;
+    }
 # Output:
 <img width="1155" height="629" alt="image" src="https://github.com/user-attachments/assets/4489b29a-7c9e-4c0b-b325-838a9b106c3c" />
 
@@ -98,27 +98,27 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 9: 
   Stop
 # Program:
-int main()
-{
- int a[10][10];
+    int main()
+    {
+    int a[10][10];
 
-int r, c, i, j, k;
+    int r, c, i, j, k;
 
-int min, colIndex;
+    int min, colIndex;
 
-int found = 0;
+    int found = 0;
 
-scanf("%d %d", &r, &c);
+    scanf("%d %d", &r, &c);
 
-printf("Enter the matrix elements:\n");
+    printf("Enter the matrix elements:\n");
 
-for (i = 0; i < r; i++){
+    for (i = 0; i < r; i++){
     for (j = 0; j < c; j++){
         scanf("%d", &a[i][j]);
     }
-}
+    }
 
-for (i = 0; i < r; i++){
+    for (i = 0; i < r; i++){
     min = a[i][0];
     colIndex = 0;
     for (j = 1; j < c; j++){
@@ -141,14 +141,14 @@ for (i = 0; i < r; i++){
         found = 1;
         break;
     }
-}
+    }
 
-if (!found){
+    if (!found){
     printf("\nNo Saddle Point exists in the matrix.\n");
-}
+    }
 
-return 0;
-}
+    return 0;
+    }
 # Output:
 <img width="1132" height="561" alt="image" src="https://github.com/user-attachments/assets/22a88d02-2d1b-4201-9b62-b26ba88e7b76" />
 
@@ -185,29 +185,29 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 10: 
   Stop
 # Program:
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-char str[100];
-int i, length;
+    #include <stdio.h>
+    #include <string.h>
+    int main()
+    {
+    char str[100];
+    int i, length;
 
-fgets(str, sizeof(str), stdin);
+    fgets(str, sizeof(str), stdin);
 
-length = strlen(str);
+    length = strlen(str);
 
-if (str[length - 1] == '\n')
+    if (str[length - 1] == '\n')
     str[length - 1] = '\0';
-length = strlen(str);
+    length = strlen(str);
 
-printf("Reversed string: ");
-for (i = length - 1; i >= 0; i--){
+    printf("Reversed string: ");
+    for (i = length - 1; i >= 0; i--){
     printf("%c", str[i]);
-}
+    }
 
-printf("\n");
-return 0;
-}
+    printf("\n");
+    return 0;
+    }
 # Output:
 <img width="1157" height="544" alt="image" src="https://github.com/user-attachments/assets/b5f0ed53-9aa4-4b07-a37d-e7b3b4d0a2b7" />
 
@@ -244,26 +244,26 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:
   Stop
 # Program:
-int main()
-{
-char str[200];
-int freq[256] = {0};
-int i;
+    int main()
+    {
+    char str[200];
+    int freq[256] = {0};
+    int i;
 
-fgets(str, sizeof(str), stdin);
-for (i = 0; str[i] != '\0'; i++){
+    fgets(str, sizeof(str), stdin);
+    for (i = 0; str[i] != '\0'; i++){
     freq[(unsigned char)str[i]]++;
-}
+    }
 
-printf("\nCharacter Frequency:\n");
-for (i = 0; i < 256; i++){
+    printf("\nCharacter Frequency:\n");
+    for (i = 0; i < 256; i++){
     if (freq[i] > 0 && i != '\n'){
         printf("'%c' : %d\n", i, freq[i]);
     }
-}
+    }
 
-return 0;
-}
+    return 0;
+    }
 # Output:
 <img width="1150" height="503" alt="image" src="https://github.com/user-attachments/assets/64b89cbe-8dcb-4fdf-9397-0431bea272f7" />
 
@@ -300,19 +300,19 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8: 
   Stop
 # Program:
-#include <stdio.h>
-#include <string.h>
-int main() {
-char str[200];
+    #include <stdio.h>
+    #include <string.h>
+    int main() {
+    char str[200];
 
-char words[50][50];
+    char words[50][50];
 
-int i, j, k = 0, w = 0;
+    int i, j, k = 0, w = 0;
 
-scanf("%[^\n]s", str);
+    scanf("%[^\n]s", str);
 
-for (i = 0; str[i] != '\0'; i++)
-{
+    for (i = 0; str[i] != '\0'; i++)
+    {
     if (str[i] == ' ')
     {
         words[w][k] = '\0';
@@ -322,12 +322,12 @@ for (i = 0; str[i] != '\0'; i++)
     
     else
     words[w][k++] = str[i];
-}
+    }
 
-words[w][k] = '\0';
-w++;
-for (i = 0; i < w; i++)
-{
+    words[w][k] = '\0';
+    w++;
+    for (i = 0; i < w; i++)
+    {
     if (words[i][0] == '\0')
         continue;
 
@@ -336,16 +336,16 @@ for (i = 0; i < w; i++)
         if (strcmp(words[i], words[j]) == 0)
         words[j][0] = '\0';
     }
-}
+    }
 
-for (i = 0; i < w; i++)
-{
+    for (i = 0; i < w; i++)
+    {
     if (words[i][0] != '\0')
     printf("%s ", words[i]);
-}
+    }
 
-return 0;
-}
+    return 0;
+    }
 # Output:
 <img width="1031" height="561" alt="image" src="https://github.com/user-attachments/assets/260806e0-11dd-4dbd-bda6-97ece8a0ba9d" />
 
